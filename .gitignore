@@ -11,9 +11,5 @@
 # Documentation/build outputs
 .Rd2pdf*.pdf
 
-# Dependency management
-renv/library/
-renv/staging/
-
 # macOS
 .DS_Store

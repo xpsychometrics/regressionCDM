@@ -1,6 +1,6 @@
 Package: regressionCDM
 Title: Corrected Regression Analysis For Cognitive Diagnosis Models
-Version: 0.1.0
+Version: 0.1.1
 Authors@R:
     person(given = "Wenchao", family = "Ma", email = "wma@umn.edu", role = c("aut", "cre"))
 Author: Wenchao Ma [aut, cre]

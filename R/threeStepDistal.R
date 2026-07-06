@@ -106,9 +106,10 @@
 #' #########################################################
 #' # example 1: binary distal outcome at the attribute level
 #' #########################################################
-#'
+#' library(GDINA)
 #' set.seed(123)
 #' N <- 3000
+#'
 #' Q <- sim10GDINA$simQ
 #' gs <- matrix(runif(nrow(Q)*2,0,0.2), nrow(Q), 2)
 #'
@@ -183,26 +184,7 @@ ThreeStepDistal <- function(object,
                             conf.level = 0.95,
                             maxit = 1000,
                             na.action = getOption("na.action")) {
-  required_helpers <- c(
-    "distal_prepare_inputs",
-    "distal_attribute_state_info",
-    "distal_profile_state_info",
-    "distal_state_design",
-    "distal_fit_bundle"
-  )
-  missing_helpers <- required_helpers[!vapply(required_helpers, exists, logical(1L), mode = "function", inherits = TRUE)]
-  if (length(missing_helpers) > 0L) {
-    stop(
-      paste0(
-        "ThreeStepDistal depends on internal helpers from R/utils.R. ",
-        "Load the package with devtools::load_all() or source('R/utils.R') before using this file. ",
-        "Missing helper(s): ",
-        paste(missing_helpers, collapse = ", "),
-        "."
-      ),
-      call. = FALSE
-    )
-  }
+
 
   level <- match.arg(level)
   method <- unique(match.arg(method, c("ML", "BCH"), several.ok = TRUE))
