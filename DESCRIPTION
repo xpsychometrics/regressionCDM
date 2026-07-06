@@ -1,0 +1,16 @@
+Package: regressionCDM
+Title: Corrected Regression Analysis For Cognitive Diagnosis Models
+Version: 0.1.0
+Authors@R:
+    person(given = "Wenchao", family = "Ma", email = "wma@umn.edu", role = c("aut", "cre"))
+Author: Wenchao Ma [aut, cre]
+Maintainer: Wenchao Ma <wma@umn.edu>
+Description: This package implemented corrected regression for including covariates
+             in cognitive diagnosis or handling distal outcome variables
+License: GPL-3
+Encoding: UTF-8
+Imports:
+    GDINA,
+    MASS
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 8.0.0
